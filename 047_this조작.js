@@ -27,8 +27,7 @@ var bruce = {
 
 peter.sayName.apply(bruce, ["batman", "richman"]);
 
-////
-
+// 31-48까지가 필수! 다른것은 선택
 function sayName() {
   console.log(this.name);
 }
