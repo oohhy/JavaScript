@@ -32,7 +32,7 @@ let p = new Promise(function (resolve, reject) {
 console.log(p);
 console.log(p);
 
-// reject
+// reject - catch만 실행
 let p = new Promise(function (resolve, reject) {
   // 비동기적으로 실행될 code 작성
   reject("hello world");
