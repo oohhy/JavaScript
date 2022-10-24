@@ -1,0 +1,54 @@
+* {
+  box-sizing: border-box;
+}
+
+#mainForm {
+  width: 460px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #ff8787;
+}
+
+#mainForm fieldset {
+  border: none;
+}
+
+#mainForm legend {
+  font-size: 1.3em;
+  text-align: center;
+}
+
+#mainForm label {
+  display: block;
+}
+
+#mainForm input {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
+}
+
+/* 가상클래스 valid. input에 입력받은 값이 유효하다면을 의미합니다. */
+#mainForm input:valid {
+  background-color: #e5ebb2;
+}
+
+#mainForm button {
+  float: right;
+  /* float하면 부모 요소가 버튼의 존재를 인식하지 못하는데 이 경우 인식해서 영역을 차지하고 있음 =feildset이 block format요소를 생성하기 때문에 인식하지 못해서 생기는 문재는 따로 처리를 해주지 않아도 된다(container) */
+  padding: 10px;
+  margin-left: 10px;
+  background-color: #f8c4b4;
+  cursor: pointer;
+  border-radius: 10px;
+  border: none;
+}
+
+#mainForm progress {
+  width: 100%;
+}
