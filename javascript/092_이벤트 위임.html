@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../reset.css" />
+    <style></style>
+  </head>
+
+  <body>
+    <article class="parent">
+      <ol>
+        <li><button class="btn-first" type="button">버튼1</button></li>
+        <li><button type="button">버튼2</button></li>
+        <li><button type="button">버튼3</button></li>
+      </ol>
+    </article>
+
+    <script>
+      // event를 적용할 대상을 직접 선택하지 않아도 부모 요소를 지정하면 캡처링 더블링 과정을 거치기 때문에 자식요소까지 target으로 event적용 가능.
+      //버튼에 일일이 이벤트를 선언하는 것보다 부모로부터 이벤트를 위임해주는 게 더 좋은 코드
+      // 모든 자식요소한테 동일한 이벤트를 발생시키고 싶으면 부모한테 이벤트리스너 달아줌
+      const parent = document.querySelector(".parent");
+      parent.addEventListener("click", function (event) {
+        console.log(this); // 아래 코드와 동일
+        console.log(event.currentTarget);
+        if (event.target.nodeName === "BUTTON") {
+          event.target.innerText = "버튼4";
+        }
+      });
+    </script>
+  </body>
+</html>
