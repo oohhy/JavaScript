@@ -1,0 +1,33 @@
+리눅스 명령어
+❯ mkdir Linux 
+메이크디렉토리
+❯ cd 
+디렉토리 이동
+❯ pwd 
+내가 어느 폴더에 있는지 알 수 있음
+❯ touch 001.html 
+파일 생성
+❯ ls  
+현재 디렉토리에 있는 내용을 출력
+❯ ls -al 
+숨김파일까지 = ll(더 많이 씀)
+❯ clear 
+전체 비우기 
+❯ -rw-r--r-- 
+권한 표시(사용자 그룹 다른사용자)
+(rwx) 읽기 쓰기 실행 
+❯ cat 001.html 
+파일 읽음
+❯ echo "hello world" >> 002.html 
+002.html에 "hello world"입력
+❯ cp 002.html 004.html  
+002.html을 004.html로 복사
+❯ mv 001.html 0011.html
+001.html을 0011.html으로 
+❯ cd ..
+상위폴더로 이동
+./ 현재폴더 ../상위폴더
+❯ sudo  
+수퍼 유저 두
+❯ find ./ -name '001.html' 
+현재 폴더에서 파일명이 001.html인 파일을 찾기
